@@ -11,7 +11,7 @@ public class Roulette implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String status;
+	private String state;
 
 	public Long getId() {
 		return id;
@@ -21,12 +21,12 @@ public class Roulette implements Serializable {
 		this.id = id;
 	}
 
-	public String getStatus() {
-		return status;
+	public String getState() {
+		return state;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setState(String state) {
+		this.state = state;
 	}
 
 	/**

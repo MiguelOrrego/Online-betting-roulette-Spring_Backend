@@ -52,7 +52,7 @@ public class BetRestController {
 
 		Map<String, Object> response = new HashMap<>();
 
-		if (roulette.getStatus().equals("Cerrada")) {
+		if (roulette.getState().equals("Cerrada")) {
 			response.put("mensaje:", "Lo siento la ruleta se encuentra cerrada");
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.BAD_REQUEST);
 
@@ -86,7 +86,7 @@ public class BetRestController {
 	}
 
 	@GetMapping("/bet/close/{rouletteId}")
-	public ResponseEntity<?> update(@PathVariable Long rouletteId) {
+	public ResponseEntity<?> closeBet(@PathVariable Long rouletteId) {
 
 		int result = 0;
 
